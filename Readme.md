@@ -28,7 +28,7 @@ Die Ergebnisse der Ausstellung werden auf einer großen Videowall in Form von Di
 
 Dieses Critical Thinking Stations Projekt ist entstanden im Verbundprojekt 
 **museum4punkt0** - Digitale Strategien für das Museum der Zukunft
-Teilprojekt *Deutsches Auswandererhaus* - Migrationsgeschichte digital erleben. 
+Teilprojekt Migrationsgeschichte digital erleben. 
 
 Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages.
 
