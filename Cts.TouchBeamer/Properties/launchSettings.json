@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cts.TouchBeamer": {
+      "commandName": "Project",
+      "commandLineArgs": "-s Galerie -server:172.24.0.12"
+    }
+  }
+}

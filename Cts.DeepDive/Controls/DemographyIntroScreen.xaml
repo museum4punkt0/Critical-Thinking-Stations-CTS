@@ -1,0 +1,47 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.DeepDive.Controls.DemographyIntroScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:common="clr-namespace:Gemelo.Applications.Cts.DeepDive.Controls.Common"
+    mc:Ignorable="d" 
+    d:DesignWidth="1920" d:DesignHeight="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Geometries.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border
+        Padding="100,100,100,70">
+        <Grid>
+            <StackPanel
+                Width="1280"
+                HorizontalAlignment="Left">
+                <TextBlock
+                    x:Name="m_TxtHeadline"
+                    Style="{StaticResource TextStyleDeepDiveScreenHeadline}"
+                    MinHeight="170">
+                    Demographinsche Fragen
+                </TextBlock>
+                <TextBlock
+                    x:Name="m_TxtText"
+                    Style="{StaticResource TextStyleDeepDiveScreenTextSmall}"
+                    Width="1100"
+                    HorizontalAlignment="Left">
+                    Folgende Fragen ermöglichen dem Deutschen Auswandererhaus eine vielfältigere wissenschaftliche Auswertung. Die Angaben sind freiwillig. Ihre Antworten werden anonym gespeichert, es werden keine personenbezogenen Daten erhoben.
+                </TextBlock>
+            </StackPanel>
+            <common:DeepDiveFooter
+                x:Name="m_Footer"
+                UseDeepDiveColors="False"
+                SkipClick="Footer_SkipClick"
+                NextClick="Footer_NextClick" />
+        </Grid>
+    </Border>
+</UserControl>

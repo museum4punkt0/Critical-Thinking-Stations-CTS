@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Deterministic>False</Deterministic>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Icons\CtsIcon.ico</ApplicationIcon>
+    <Authors>gemelo GmbH</Authors>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <RootNamespace>Gemelo.Applications.Cts.Import</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="Resources\Icons\CtsIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Applications\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Applications\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cts.Common.Wpf\Cts.Common.Wpf.csproj" />
+    <ProjectReference Include="..\Cts.Common\Cts.Common.csproj" />
+    <ProjectReference Include="..\Cts.Database\Cts.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.ClosedXml">
+      <HintPath>..\gemelo-libraries\gemelo.ClosedXml.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Cms">
+      <HintPath>..\gemelo-libraries\gemelo.Cms.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Cms.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Cms.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Exhibits">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Exhibits.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\CtsIcon.ico" />
+  </ItemGroup>
+
+</Project>

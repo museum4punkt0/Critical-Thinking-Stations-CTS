@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cts.TouchBeamer", "Cts.TouchBeamer\Cts.TouchBeamer.csproj", "{E6163B76-5617-426A-93B1-D5FE19763211}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cts.Common", "Cts.Common\Cts.Common.csproj", "{60DA804A-278C-4D72-8323-4E1126715E80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cts.DeepDive", "Cts.DeepDive\Cts.DeepDive.csproj", "{05C3EEC6-7FB6-4137-8400-BF2D784D01DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cts.Common.Wpf", "Cts.Common.Wpf\Cts.Common.Wpf.csproj", "{B8C8939C-51B0-4051-A9F2-3BA96D11143A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cts.Wall", "Cts.Wall\Cts.Wall.csproj", "{0476CEF1-BD68-4B93-9152-1C2B0D75AABC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6163B76-5617-426A-93B1-D5FE19763211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6163B76-5617-426A-93B1-D5FE19763211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6163B76-5617-426A-93B1-D5FE19763211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6163B76-5617-426A-93B1-D5FE19763211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DA804A-278C-4D72-8323-4E1126715E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DA804A-278C-4D72-8323-4E1126715E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DA804A-278C-4D72-8323-4E1126715E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DA804A-278C-4D72-8323-4E1126715E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C3EEC6-7FB6-4137-8400-BF2D784D01DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C3EEC6-7FB6-4137-8400-BF2D784D01DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C3EEC6-7FB6-4137-8400-BF2D784D01DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C3EEC6-7FB6-4137-8400-BF2D784D01DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C8939C-51B0-4051-A9F2-3BA96D11143A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C8939C-51B0-4051-A9F2-3BA96D11143A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C8939C-51B0-4051-A9F2-3BA96D11143A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C8939C-51B0-4051-A9F2-3BA96D11143A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0476CEF1-BD68-4B93-9152-1C2B0D75AABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0476CEF1-BD68-4B93-9152-1C2B0D75AABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0476CEF1-BD68-4B93-9152-1C2B0D75AABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0476CEF1-BD68-4B93-9152-1C2B0D75AABC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8E68F8C-E82A-42B0-A8D7-128210412B23}
+	EndGlobalSection
+EndGlobal

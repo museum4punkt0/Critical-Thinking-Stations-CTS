@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Deterministic>False</Deterministic>
+    <AssemblyName>gemelo.Cts.Database</AssemblyName>
+    <RootNamespace>Gemelo.Components.Cts.Database</RootNamespace>
+    <Company>gemelo GmbH</Company>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Authors>gemelo GmbH</Authors>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Scripts\CreateDatabase.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scripts\CreateDatabase.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cts.Wall": {
+      "commandName": "Project",
+      "commandLineArgs": "-s -server:cts.dah-expo.zz"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+﻿<cts:CtsMainWindow 
+    x:Class="Gemelo.Applications.Cts.Wall.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    xmlns:controls="clr-namespace:Gemelo.Applications.Cts.Wall.Controls"
+    mc:Ignorable="d"
+    Width="7680" Height="2160"
+    Background="Black">
+
+    <cts:CtsMainWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </cts:CtsMainWindow.Resources>
+
+    <Grid
+        x:Name="m_GridMain"
+        Width="7680" Height="2160">
+        <Grid
+            Width="4800" Height="2160"
+            HorizontalAlignment="Left">
+            <controls:WallBackground
+                x:Name="m_Background" />
+            <Canvas
+                x:Name="m_CanvasMainControls"
+                Margin="1920,0,0,0">
+            </Canvas>
+            <Border
+                Width="1920"
+                Margin="0,800,0,0"
+                HorizontalAlignment="Left" VerticalAlignment="Top">
+                <controls:WallInformationDisplay
+                    x:Name="m_InformationDisplay"
+                    PageChange="InformationDisplay_PageChange" />
+            </Border>
+            <controls:VideoWallSimulationGrid
+                x:Name="m_VideoWallSimulationGrid"
+                Visibility="Collapsed" />
+        </Grid>
+    </Grid>
+</cts:CtsMainWindow>

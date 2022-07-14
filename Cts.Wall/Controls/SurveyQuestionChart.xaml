@@ -1,0 +1,250 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.Wall.Controls.SurveyQuestionChart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    xmlns:wpfexgraphics="clr-namespace:Gemelo.Components.Common.Wpf.Graphics;assembly=gemelo.Common.Wpf"
+    xmlns:dah="http://schema.gemelo.de/components/dah"
+    mc:Ignorable="d" 
+    Width="960" MinHeight="540" d:DesignHeight="540">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfexgraphics:BrushCollection
+                x:Key="ChartBrushes">
+                #C5D984,#E94E24,#E9427D;#52AE32;#009F5E;#C5D984,#E94E24,#E9427D;#52AE32;#009F5E;#00B1EB;#009BA4;#CBE9FC
+            </wpfexgraphics:BrushCollection>
+            <Style
+                x:Key="StylePieCharts"
+                TargetType="wpfex:PieChart">
+                <Setter Property="EntryFills" Value="{StaticResource ChartBrushes}" />
+                <Setter Property="EntryStrokeThickness" Value="1" />
+                <Setter Property="EntryStrokeBrushes" Value="#12152A" />
+                <!--<Setter Property="Fond" Value="#12152A" />-->
+                <Setter Property="TextStyle" Value="{StaticResource TextStyleWallPieLabel}" />
+            </Style>
+            <Style
+                x:Key="StyleBarChart"
+                TargetType="wpfex:BarChart">
+                <Setter Property="BarWidth" Value="35" />
+                <Setter Property="EntryFills" Value="{StaticResource ChartBrushes}" />
+                <Setter Property="EntryStrokeThickness" Value="1" />
+                <Setter Property="EntryStrokeBrushes" Value="#12152A" />
+                <Setter Property="TextStyle">
+                    <Setter.Value>
+                        <Style
+                            TargetType="TextBlock"
+                            BasedOn="{StaticResource TextStyleWallPieLabel}">
+                            <Setter Property="Margin" Value="10,0,0,0" />
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style
+                x:Key="LocalizedTextStyleWallQuestionTitleForPieChart"
+                TargetType="dah:LocalizedTextBlock">
+                <Setter Property="Width" Value="500" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="TextBlockStyle" Value="{StaticResource TextStyleWallQuestionTitle}" />
+                <Setter Property="SecondLanguageTextStyle" Value="{StaticResource FormattingTextStyleQuestionTitleSecondLanguage}" />
+            </Style>
+            <Style
+                x:Key="LocalizedTextStyleWallQuestionTitleForBarChart"
+                TargetType="dah:LocalizedTextBlock"
+                BasedOn="{StaticResource LocalizedTextStyleWallQuestionTitleForPieChart}">
+                <Setter Property="Width" Value="630" />
+            </Style>
+
+            <Style
+                x:Key="LocalizedTextStyleWallQuestionTextForPieChart"
+                TargetType="dah:LocalizedTextBlock">
+                <Setter Property="Width" Value="410" />
+                <Setter Property="Margin" Value="0,5,0,0" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="TextBlockStyle" Value="{StaticResource TextStyleWallQuestionText}" />
+                <Setter Property="SecondLanguageTextStyle" Value="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}" />
+            </Style>
+            <Style
+                x:Key="LocalizedTextStyleWallQuestionTextForBarChart"
+                TargetType="dah:LocalizedTextBlock"
+                BasedOn="{StaticResource LocalizedTextStyleWallQuestionTextForPieChart}">
+                <Setter Property="Width" Value="630" />
+            </Style>
+
+            <Style
+                x:Key="StyleAnswerTextColumnForPieChart"
+                TargetType="ColumnDefinition">
+                <Setter Property="Width" Value="380" />
+            </Style>
+            <Style
+                x:Key="StyleAnswerTextColumnForBarChart"
+                TargetType="ColumnDefinition">
+                <Setter Property="Width" Value="600" />
+            </Style>
+            <Style
+                x:Key="StyleAnswerText"
+                TargetType="dah:LocalizedTextBlock">
+                <Setter Property="Grid.Column" Value="0" />
+                <Setter Property="Margin" Value="0,0,0,15" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="AllowSingleLine" Value="True" />
+                <Setter Property="TextBlockStyle" Value="{StaticResource TextStyleWallQuestionAnswer}" />
+                <Setter Property="SecondLanguageTextStyle" Value="{StaticResource FormattingTextStyleQuestionAnswerSecondLanguage}" />
+            </Style>
+            <Style
+                x:Key="StylePieChartLegendRectangle"
+                TargetType="Rectangle">
+                <Setter Property="Grid.Column" Value="1" />
+                <Setter Property="Margin" Value="10,0,0,15" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Width" Value="17" />
+                <Setter Property="Height" Value="17" />
+            </Style>
+
+            <Style
+                x:Key="LocalizedTextStyleWallAnswerCountLabel"
+                TargetType="dah:LocalizedTextBlock">
+                <Setter Property="VerticalAlignment" Value="Top" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="AllowSingleLine" Value="True" />
+                <Setter Property="TextBlockStyle" Value="{StaticResource TextStyleWallQuestionText}" />
+                <Setter Property="SecondLanguageTextStyle" Value="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}" />
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid
+        x:Name="m_GridMain">
+        <StackPanel
+            x:Name="m_StackTexts"
+            Margin="40,36,0,0"
+            HorizontalAlignment="Stretch" VerticalAlignment="Top"
+            SizeChanged="StackTexts_SizeChanged">
+            <dah:LocalizedTextBlock
+                x:Name="m_LocalizedTextTitle"
+                Style="{StaticResource LocalizedTextStyleWallQuestionTitleForPieChart}"
+                Text="de:WANDERUNGSGESCHICHTE||en:MIGRATION HISTORY" />
+            <dah:LocalizedTextBlock
+                x:Name="m_LocalizedTextQuestion"
+                Style="{StaticResource LocalizedTextStyleWallQuestionTextForPieChart}"
+                Text="de:Leben Sie in dem Land / Ort, in dem Sie geboren / aufgewachsen sind?||en:Do you live in the country / place you were born / raised in?" />
+            <Grid
+                x:Name="m_GridAnswers"
+                Margin="0,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="m_GridColumnAnswerText" Style="{StaticResource StyleAnswerTextColumnForPieChart}" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <StackPanel
+                x:Name="m_StackAnswerCount"
+                Orientation="Horizontal"
+                Margin="0,5,0,70">
+                <dah:LocalizedTextBlock
+                    x:Name="m_LocalizedTextAnswerCountLabel"
+                    MinWidth="10"
+                    Style="{StaticResource LocalizedTextStyleWallAnswerCountLabel}"
+                    Text="de:Antworten.||en:Answers:" />
+                <TextBlock
+                    x:Name="m_TxtAnswerCount"                    
+                    Style="{StaticResource TextStyleWallAnswerCount}"
+                    Margin="10,0,0,0"
+                    VerticalAlignment="Top"
+                    Text="355 / 491" />
+            </StackPanel>
+        </StackPanel>
+        <Grid
+            x:Name="m_GridCharts">
+            <Grid
+                x:Name="m_GridPieChartDouble"
+                Width="495"
+                Margin="0,40"
+                HorizontalAlignment="Right" VerticalAlignment="Stretch">
+                <wpfex:PieChart
+                    x:Name="m_PieChartOuter"
+                    Margin="0,50,0,0"
+                    Style="{StaticResource StylePieCharts}"
+                    OuterDiameter="385" InnerDiameter="319"
+                    LabelDiameter="452" LabelDiameterVertical="432"
+                    Entries="50 19 31"
+                    EntryProgressChanged="Chart_EntryProgressChanged" />
+                <wpfex:PieChart
+                    x:Name="m_PieChartInner"
+                    Margin="0,50,0,0"
+                    Style="{StaticResource StylePieCharts}"
+                    OuterDiameter="295" InnerDiameter="229"
+                    LabelDiameter="160" LabelDiameterVertical="170"
+                    Entries="19 40 41"/>
+                <dah:LocalizedTextBlock
+                    x:Name="m_LocalizedTextOuterChartTitle"
+                    Width="160"
+                    AllowSingleLine="True"
+                    HorizontalAlignment="Center" VerticalAlignment="Top"
+                    TextBlockStyle="{StaticResource TextStyleWallQuestionLabel}"
+                    SecondLanguageTextStyle="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}"
+                    Text="de:Land.||en:Country." />
+                <dah:LocalizedTextBlock
+                    x:Name="m_LocalizedTextInnerChartTitle"
+                    Width="160"
+                    Margin="0,50,0,0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    TextBlockStyle="{StaticResource TextStyleWallQuestionLabel}"
+                    SecondLanguageTextStyle="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}"
+                    Text="de:Ort.||en:Place." />
+            </Grid>
+            <Grid
+                x:Name="m_GridPieChartSingle"
+                Width="520"
+                Margin="0,40"
+                HorizontalAlignment="Right" VerticalAlignment="Stretch">
+                <wpfex:PieChart
+                    x:Name="m_PieChartSingle"
+                    Style="{StaticResource StylePieCharts}"
+                    OuterDiameter="340" InnerDiameter="270"
+                    LabelDiameter="407" LabelDiameterVertical="390"
+                    Entries="10 32 41"
+                    EntryProgressChanged="Chart_EntryProgressChanged" />
+                <dah:LocalizedTextBlock
+                    x:Name="m_LocalizedTextSingleChartTitle"
+                    Visibility="{Binding ElementName=m_LocalizedTextOuterChartTitle, Path=Visibility}"
+                    Opacity="{Binding ElementName=m_LocalizedTextOuterChartTitle, Path=Opacity}"
+                    Width="160"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    TextBlockStyle="{StaticResource TextStyleWallQuestionLabel}"
+                    SecondLanguageTextStyle="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}"
+                    Text="de:Ort.||en:Place." />
+            </Grid>
+            <Grid
+                x:Name="m_GridBarChart"
+                Width="310"
+                HorizontalAlignment="Right" VerticalAlignment="Stretch">
+                <wpfex:BarChart
+                    x:Name="m_BarChart"
+                    Style="{StaticResource StyleBarChart}"
+                    Width="310" Height="{Binding ElementName=m_GridMain, Path=ActualHeight}"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    MinBarLength="3"
+                    MaxBarLength="200"
+                    DefaultBarInterval="50"
+                    Entries="10 20 21 10 5"
+                    EntryProgressChanged="Chart_EntryProgressChanged" />
+                <dah:LocalizedTextBlock
+                    x:Name="m_LocalizedTextBarChartTitle"
+                    Visibility="{Binding ElementName=m_LocalizedTextOuterChartTitle, Path=Visibility}"
+                    Opacity="{Binding ElementName=m_LocalizedTextOuterChartTitle, Path=Opacity}"
+                    Width="160"
+                    AllowSingleLine="True"
+                    HorizontalAlignment="Center" VerticalAlignment="Top"
+                    TextBlockStyle="{StaticResource TextStyleWallQuestionLabel}"
+                    SecondLanguageTextStyle="{StaticResource FormattingTextStyleQuestionTextSecondLanguage}"
+                    Text="de:Ort.||en:Place." />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

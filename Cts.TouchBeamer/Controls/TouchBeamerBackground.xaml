@@ -1,0 +1,69 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.TouchBeamer.Controls.TouchBeamerBackground"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    mc:Ignorable="d" 
+    Width="1920" Height="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfex:InverseVisibilityConverter
+                x:Key="InverseVisibilityConverter" />
+            <Style
+                x:Key="StyleNextButtonDefault"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleTouchBeamerNextButtonBase}">
+                <Setter Property="Background" Value="#e6e6e6" />
+                <Setter Property="BorderBrush" Value="White" />
+                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="Foreground" Value="Black" />
+            </Style>
+            <Style
+                x:Key="StyleNextButtonDisabled"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleTouchBeamerNextButtonBase}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderBrush" Value="#555" />
+                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="Foreground" Value="#666" />
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1455" />
+            <ColumnDefinition Width="385" />
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Column="1">
+            <cts:CtsLogo 
+                Height="200"
+                HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <TextBlock
+                x:Name="m_TxtProgress"
+                Style="{StaticResource TextStyleCtsStationProgress}"
+                Margin="0,240,0,0">
+            </TextBlock>
+            <wpfex:BorderedButton
+                x:Name="m_BtnNext"
+                Style="{StaticResource StyleNextButtonDefault}"
+                VerticalAlignment="Bottom"
+                Click="BtnNext_Click">
+                <TextBlock
+                    x:Name="m_TxtButton">
+                    Weiter
+                </TextBlock>
+            </wpfex:BorderedButton>
+        </Grid>
+    </Grid>
+</UserControl>

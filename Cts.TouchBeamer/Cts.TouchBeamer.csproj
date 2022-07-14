@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <Deterministic>false</Deterministic>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Icons\CtsIcon.ico</ApplicationIcon>
+    <Authors>gemelo GmbH</Authors>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <RootNamespace>Gemelo.Applications.Cts.TouchBeamer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Icons\CtsIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Applications\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Applications\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cts.Common.Wpf\Cts.Common.Wpf.csproj" />
+    <ProjectReference Include="..\Cts.Common\Cts.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.Cms">
+      <HintPath>..\gemelo-libraries\gemelo.Cms.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Cms.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Cms.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Exhibits">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Exhibits.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.LidarTouch">
+      <HintPath>..\gemelo-libraries\gemelo.LidarTouch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\CtsIcon.ico" />
+  </ItemGroup>
+
+</Project>

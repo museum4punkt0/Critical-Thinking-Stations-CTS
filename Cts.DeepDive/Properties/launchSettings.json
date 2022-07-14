@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cts.DeepDive": {
+      "commandName": "Project",
+      "commandLineArgs": "-s -rfidpos:bottomright -server:172.24.0.12"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Deterministic>false</Deterministic>
+    <AssemblyName>gemelo.Cts.Common</AssemblyName>
+    <RootNamespace>Gemelo.Components.Cts</RootNamespace>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Company>gemelo GmbH</Company>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <Authors>gemelo GmbH</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

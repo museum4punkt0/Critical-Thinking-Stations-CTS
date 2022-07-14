@@ -1,0 +1,58 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.Wall.Controls.WallInformationDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:dah="http://schema.gemelo.de/components/dah"
+    xmlns:helper="clr-namespace:Gemelo.Applications.Cts.Wall.Controls.Helper"
+    mc:Ignorable="d" 
+    Width="881" d:DesignHeight="850">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <dah:LocalizedTextBlock
+            x:Name="m_LocalizedTextTitle"
+            TextBlockStyle="{StaticResource TextStyleWallStationTitle}"
+            SecondLanguageTextStyle="{StaticResource FormattingTextStyleStationTitleSecondLanguage}"
+            Text="de:DIE ANTWORTEN ZUR UMFRAGE||en:THE ANSWERS TO THE SURVEY" />
+        <UniformGrid
+            Columns="2"
+            Margin="0,65,0,0">
+            <TextBlock
+                x:Name="m_TxtDescriptionDefaultLanguage"
+                Style="{StaticResource TextStyleWallDescriptionDefaultLanguage}"
+                Width="400" HorizontalAlignment="Left">
+                Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+            </TextBlock>
+            <TextBlock
+                x:Name="m_TxtDescriptionSecondLanguage"
+                Style="{StaticResource TextStyleWallDescriptionSecondLanguage}"
+                Width="400" HorizontalAlignment="Right">
+                Far back, behind the mountains of words, far from the countries vowels and consonants, live the blind texts. They live in isolation in Buchhausen on the coast of Semantics, a large language ocean.
+            </TextBlock>
+        </UniformGrid>
+        <DockPanel            
+            Margin="0,100,0,0">
+            <Border
+                DockPanel.Dock="Left"
+                Width="1" Height="16"
+                VerticalAlignment="Bottom"
+                BorderThickness="1 0 0 0"
+                BorderBrush="White"/>
+            <UniformGrid
+                x:Name="m_GridPageProgresses"
+                Columns="2">
+                <helper:PageProgress />
+                <helper:PageProgress />
+            </UniformGrid>
+        </DockPanel>
+    </StackPanel>
+</UserControl>

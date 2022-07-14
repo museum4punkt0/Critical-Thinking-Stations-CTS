@@ -1,0 +1,70 @@
+﻿<UserControl     
+    x:Class="Gemelo.Applications.Cts.TouchBeamer.Controls.InfoScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    mc:Ignorable="d" 
+    Width="1920" Height="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfex:InverseVisibilityConverter
+                x:Key="InverseVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1455" />
+            <ColumnDefinition Width="385" />
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Column="0"
+            Margin="70,0,40,0">
+            <!--<Rectangle
+                Width="1455" Height="1"
+                Margin="0,200,0,0"
+                VerticalAlignment="Top"
+                Fill="Red" />-->
+            <Border
+                Height="220"
+                HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <TextBlock
+                    x:Name="m_TxtHeadline"
+                    Style="{StaticResource TextStyleCtsBase}"
+                    VerticalAlignment="Bottom"
+                    FontSize="85" LineHeight="100"
+                    Foreground="White">
+                    <!--Willkommen-->
+                </TextBlock>
+            </Border>
+            <TextBlock
+                x:Name="m_TxtText"
+                Style="{StaticResource TextStyleCtsBase}"
+                Margin="0,290,0,0"
+                VerticalAlignment="Top"
+                FontSize="50" LineHeight="60"
+                Foreground="White">
+                <!--Es erwarten Sie spannende Fragen an verschiedenen Stationen im Museumsrundgang. Die Angaben sind freiwillig. Ihre Antworten werden gespeichert, es werden keine personenbezogenen Daten erhoben. Das Deutsche Auswandererhaus nutzt diese anonyme Umfrage für wissenschaftliche Studien.<LineBreak /><LineBreak />
+                Am Ausstellungsende erhalten Sie Ihre Auswertung und die Chance, Antworten zu überdenken.-->
+            </TextBlock>
+            <TextBlock
+                x:Name="m_TxtHint"
+                Style="{StaticResource TextStyleCtsBase}"
+                Margin="0,0,0,-11"
+                VerticalAlignment="Bottom"
+                FontSize="36" LineHeight="46"
+                TextAlignment="Right"
+                Foreground="White">
+                <!--Durch Drücken auf „Beginnen“ bestätige ich die Kenntnisnahme<LineBreak/>obiger Hinweise zur Datenerhebung und -speicherung.-->
+            </TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

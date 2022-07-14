@@ -1,0 +1,113 @@
+﻿<cts:CtsMainWindow 
+    x:Class="Gemelo.Applications.Cts.TouchBeamer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    xmlns:lidar="http://schema.gemelo.de/components/lidar"
+    xmlns:controls="clr-namespace:Gemelo.Applications.Cts.TouchBeamer.Controls"
+    mc:Ignorable="d"
+    Width="1920" Height="1080">
+
+    <cts:CtsMainWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </cts:CtsMainWindow.Resources>
+
+    <Grid
+        Width="1920" Height="1080">
+        <Viewbox
+            x:Name="m_ViewboxMain"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Canvas
+                Width="1920" Height="1080">
+                <controls:TouchBeamerBackground
+                    x:Name="m_Background"
+                    Visibility="Collapsed"
+                    NextClick="Background_NextClick" />
+                <Canvas
+                    x:Name="m_CanvasMainControls">
+                    <cts:CtsStartScreen
+                        x:Name="m_StartScreen"
+                        Width="1920" Height="1080"
+                        Visibility="Collapsed" />
+                    <controls:InfoScreen
+                        x:Name="m_WelcomeFirstScreen"
+                        Visibility="Collapsed" />
+                    <controls:InfoScreen
+                        x:Name="m_PrivacyScreen"
+                        Visibility="Collapsed" />
+                    <controls:InfoScreen
+                        x:Name="m_WelcomeAgainScreen"
+                        Visibility="Collapsed" />
+                    <controls:InfoScreen
+                        x:Name="m_WelcomeBackUnansweredQuestionsScreen"
+                        Visibility="Collapsed" />
+                    <controls:QuestionScreen
+                        x:Name="m_QuestionScreenA"
+                        Visibility="Collapsed"
+                        AnswerChanged="QuestionScreen_AnswerChanged" />
+                    <controls:QuestionScreen
+                        x:Name="m_QuestionScreenB"
+                        Visibility="Collapsed"
+                        AnswerChanged="QuestionScreen_AnswerChanged" />
+                    <controls:InfoScreen
+                        x:Name="m_GoodbyeScreen" />
+                    <controls:InfoScreen
+                        x:Name="m_ReturnAlreadyCompletedScreen"
+                        Visibility="Collapsed" />
+                </Canvas>
+                <lidar:LidarSensorVisualization
+                    x:Name="m_LidarSensorVisualization"
+                    Visibility="Collapsed"
+                    Width="1920" Height="1080" />
+                <lidar:LidarTouchCalibrationControl
+                    x:Name="m_LidarTouchCalibrationControl"
+                    Visibility="Collapsed"
+                    Width="1920" Height="1080"
+                    Completed="LidarTouchCalibrationControl_Completed" />
+                <lidar:LidarTouchVisualization
+                    x:Name="m_LidarTouchVisualization"
+                    Visibility="Collapsed"
+                    Width="1920" Height="1080" />
+                <cts:MessageBox
+                    x:Name="m_MessageBox"
+                    Visibility="Collapsed"
+                    Width="1920" Height="1080"
+                    MessageBoxBackground="#333"
+                    MessageBoxBorderBrush="#555"
+                    ButtonBackground="#DBDBDB"
+                    ButtonForeground="Black"
+                    ButtonsSensitiveMargin="50" />
+                <cts:OfflineWarningOverlay
+                    x:Name="m_OfflineWarningOverlay"
+                    Width="1920" Height="1080" />
+            </Canvas>
+        </Viewbox>
+        <Border
+            x:Name="m_BorderVisualization"
+            Visibility="Collapsed"
+            Margin="{Binding ElementName=m_ViewboxMain, Path=Margin}"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            BorderBrush="White"
+            BorderThickness="3" />
+        <Border
+            x:Name="m_BorderNoLidarMessage"
+            Visibility="Collapsed"
+            Margin="{Binding ElementName=m_ViewboxMain, Path=Margin}"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock
+                Style="{StaticResource TextStyleCtsBase}"
+                HorizontalAlignment="Right" VerticalAlignment="Top"
+                Margin="50"
+                FontSize="20"
+                Foreground="Red">
+                NO LIDAR!
+            </TextBlock>
+        </Border>
+    </Grid>
+</cts:CtsMainWindow>

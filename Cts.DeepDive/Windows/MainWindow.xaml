@@ -1,0 +1,101 @@
+﻿<cts:CtsMainWindow 
+    x:Class="Gemelo.Applications.Cts.DeepDive.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    xmlns:controls="clr-namespace:Gemelo.Applications.Cts.DeepDive.Controls"
+    xmlns:common="clr-namespace:Gemelo.Applications.Cts.DeepDive.Controls.Common"
+    mc:Ignorable="d"
+    Width="1920" Height="1080">
+
+    <cts:CtsMainWindow.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="StyleMessageBoxDefault"
+                TargetType="cts:MessageBox">
+                <Setter Property="MessageBoxBackground" Value="#001036" />
+                <Setter Property="MessageBoxBorderBrush" Value="#243865" />
+                <Setter Property="MessageBoxBorderThickness" Value="1" />
+                <Setter Property="ButtonForeground" Value="White" />
+                <Setter Property="ButtonBackground" Value="#0A2F5A" />
+            </Style>
+            <Style
+                x:Key="StyleMessageBoxDeepDive"
+                TargetType="cts:MessageBox">
+                <Setter Property="MessageBoxBackground" Value="#001D26" />
+                <Setter Property="MessageBoxBorderBrush" Value="#193F41" />
+                <Setter Property="MessageBoxBorderThickness" Value="1" />
+                <Setter Property="ButtonForeground" Value="White" />
+                <Setter Property="ButtonBackground" Value="#193F41" />
+            </Style>
+        </ResourceDictionary>
+    </cts:CtsMainWindow.Resources>
+    
+    <Grid
+        x:Name="m_GridMain"
+        Width="1920" Height="1080"
+        ClipToBounds="True">
+        <common:DeepDiveBackground
+            x:Name="m_Background"
+            Background="#001036" />
+        <Grid
+            x:Name="m_GridMainControls">
+            <cts:CtsStartScreen
+                x:Name="m_StartScreen"
+                Visibility="Collapsed" />
+            <controls:DeepDiveOverviewScreen
+                x:Name="m_DeepDiveOverviewScreen"
+                Visibility="Collapsed"
+                UserInteraction="DeepDiveOverviewScreen_UserInteraction"
+                QuestionClick="DeepDiveOverviewScreen_QuestionClick"
+                NextClick="DeepDiveOverviewScreen_NextClick" />
+            <controls:DeepDiveContentScreen
+                x:Name="m_DeepDiveContentScreen"                        
+                Visibility="Collapsed"
+                UserInteraction="DeepDiveContentScreen_UserInteraction"
+                BackClick="DeepDiveContentScreen_BackClick" />
+            <controls:QuestionScreen
+                x:Name="m_ReanswerQuestionScreen"
+                UseDeepDiveColors="True"
+                Visibility="Collapsed"
+                AnswerChanged="ReanswerQuestionScreen_AnswerChanged"
+                NextClick="ReanswerQuestionScreen_NextClick" />
+            <controls:FinalOverviewScreen
+                x:Name="m_FinalOverviewScreen"                        
+                Visibility="Collapsed"
+                UserInteraction="FinalOverviewScreen_UserInteraction"
+                NextClick="FinalOverviewScreen_NextClick" />
+            <controls:DemographyIntroScreen
+                x:Name="m_DemographyIntroScreen"
+                Visibility="Collapsed"
+                SkipClick="DemographyIntroScreen_SkipClick"
+                ConfirmClick="DemographyIntroScreen_ConfirmClick" />
+            <controls:QuestionScreen
+                x:Name="m_DemographyQuestionScreenA"
+                Visibility="Collapsed"
+                UseDeepDiveColors="False"
+                AnswerChanged="DemographyQuestionScreen_AnswerChanged" 
+                NextClick="DemographyQuestionScreen_NextClick" />
+            <controls:QuestionScreen
+                x:Name="m_DemographyQuestionScreenB"
+                Visibility="Collapsed"
+                UseDeepDiveColors="False"
+                AnswerChanged="DemographyQuestionScreen_AnswerChanged" 
+                NextClick="DemographyQuestionScreen_NextClick" />
+            <controls:GoodbyeScreen
+                x:Name="m_GoodbyeScreen"
+                Visibility="Collapsed"
+                CompletedClick="GoodbyeScreen_CompletedClick" />
+        </Grid>
+        <cts:MessageBox
+            x:Name="m_MessageBox"
+            Visibility="Collapsed"
+            Style="{StaticResource StyleMessageBoxDefault}"
+            Width="1920" Height="1080"
+            ButtonsSensitiveMargin="20" />
+        <cts:OfflineWarningOverlay
+            x:Name="m_OfflineWarningOverlay" />
+    </Grid>
+</cts:CtsMainWindow>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <Deterministic>False</Deterministic>
+    <RootNamespace>Gemelo.Components.Cts.WebApiHost</RootNamespace>
+    <AssemblyName>gemelo.Cts.WebApiHost</AssemblyName>
+    <Company>gemelo GmbH</Company>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Authors>gemelo GmbH</Authors>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cts.Common\Cts.Common.csproj" />
+    <ProjectReference Include="..\Cts.Database\Cts.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.Cms">
+      <HintPath>..\gemelo-libraries\gemelo.Cms.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

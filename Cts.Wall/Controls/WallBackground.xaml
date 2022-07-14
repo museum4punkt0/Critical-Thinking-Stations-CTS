@@ -1,0 +1,40 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.Wall.Controls.WallBackground"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:dah="http://schema.gemelo.de/components/dah"
+    mc:Ignorable="d" 
+    d:DesignWidth="4800" d:DesignHeight="2160"
+    Background="#131428"> <!-- #202132" -->
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <MediaElement
+            x:Name="m_MediaElement"
+            Width="1920" Height="2160"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            LoadedBehavior="Manual"
+            MediaEnded="MediaElement_MediaEnded" />
+        <dah:DahLogo
+            Width="300"
+            Margin="40,90"
+            HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBlock
+            x:Name="m_TxtLink"
+            Style="{StaticResource TextStyleWallBackgroundLink}"
+            Margin="40,90"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            www.dah–bremerhaven.de/dialog-migration
+        </TextBlock>
+            
+    </Grid>
+</UserControl>

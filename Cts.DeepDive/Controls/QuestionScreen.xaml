@@ -1,0 +1,41 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.DeepDive.Controls.QuestionScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    xmlns:common="clr-namespace:Gemelo.Applications.Cts.DeepDive.Controls.Common"
+    mc:Ignorable="d" 
+    d:DesignWidth="1920" d:DesignHeight="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfex:InverseVisibilityConverter
+                x:Key="InverseVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <cts:SurveyQuestionControl
+            x:Name="m_QuestionControl"
+            Margin="250,100,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            AnswerChanged="QuestionControl_AnswerChanged">
+            <cts:SurveyQuestionControl.LayoutTransform>
+                <ScaleTransform
+                    ScaleX="0.75" ScaleY="0.75" />
+            </cts:SurveyQuestionControl.LayoutTransform>
+        </cts:SurveyQuestionControl>
+        <common:DeepDiveFooter
+            x:Name="m_Footer"
+            Margin="100,70"
+            HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+            NextClick="Footer_NextClick" />
+    </Grid>
+</UserControl>

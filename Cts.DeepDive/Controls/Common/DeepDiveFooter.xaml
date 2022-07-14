@@ -1,0 +1,95 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.DeepDive.Controls.Common.DeepDiveFooter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    mc:Ignorable="d" 
+    d:DesignWidth="1920" d:DesignHeight="100">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Dah.Common.Wpf;component/Resources/Xaml/Geometries.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="StyleNextButtonDefault"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleDeepDiveNextButtonBase}">
+                <Setter Property="Background" Value="#0A2F5A" />
+                <Setter Property="BorderBrush" Value="#10509B" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+            <Style
+                x:Key="StyleNextButtonDeepDive"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleDeepDiveNextButtonBase}">
+                <Setter Property="Background" Value="#193F41" />
+                <Setter Property="BorderBrush" Value="#22585A" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+            <Style
+                x:Key="StyleNextButtonDefaultDisabled"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleDeepDiveNextButtonBase}">
+                <Setter Property="Background" Value="#061439" />
+                <Setter Property="BorderBrush" Value="#005B9F" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+            <Style
+                x:Key="StyleNextButtonDeepDiveDisabled"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleDeepDiveNextButtonBase}">
+                <Setter Property="Background" Value="#0F2129" />
+                <Setter Property="BorderBrush" Value="#193F41" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Path
+            x:Name="m_PathLogo"
+            HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Data="{StaticResource GeometryDahLogo}"
+            Fill="White" />
+        <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <TextBlock
+                x:Name="m_TxtHint"
+                Visibility="Collapsed"
+                Style="{StaticResource TextStyleDeepDiveHint}"
+                Margin="0,0,25,0"
+                VerticalAlignment="Bottom">
+                Durch Drücken auf „Weiter“ bestätige ich die Kenntnisnahme<LineBreak />obiger Hinweise zur Datenerhebung und -speicherung.
+            </TextBlock>
+            <wpfex:BorderedButton
+                x:Name="m_BtnSkip"
+                Visibility="Collapsed"
+                Style="{StaticResource StyleNextButtonDefaultDisabled}"
+                SensitiveMargin="50"
+                Margin="0,0,30,0"
+                Click="BtnSkip_Click">
+                <TextBlock
+                    x:Name="m_TxtSkipButton">
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                x:Name="m_BtnNext"
+                Style="{StaticResource StyleNextButtonDefault}"
+                SensitiveMargin="50"
+                Click="BtnNext_Click">
+                <TextBlock
+                    x:Name="m_TxtNextButton">
+                </TextBlock>
+            </wpfex:BorderedButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,351 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:textformatting="clr-namespace:Gemelo.Components.Common.Wpf.Text.Formatting;assembly=gemelo.Common.Wpf">
+
+    <Style
+        x:Key="TextStyleCtsBase"
+        TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Weissenhof Grotesk" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleCtsStationTitle"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="75" />
+        <Setter Property="LineHeight" Value="80" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleCtsStationSubTitle"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="LineHeight" Value="80" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#999999" />
+    </Style>
+    <Style
+        x:Key="TextStyleCtsStationText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="LineHeight" Value="50" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleCtsStationRfidHint"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="LineHeight" Value="40" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleCtsStationProgress"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="LineHeight" Value="45" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleCtsMessageBoxTitle"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="48" />
+        <Setter Property="LineHeight" Value="60" />
+    </Style>
+    <Style
+        x:Key="TextStyleCtsMessageBoxText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="LineHeight" Value="32" />
+    </Style>
+
+    <Style
+        x:Key="StyleSurveyQuestionText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="48" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="LineHeight" Value="60" />
+    </Style>
+    <Style
+        x:Key="StyleSurveyAnswerText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <!--<Setter Property="Width" Value="635" />-->
+        <Setter Property="Margin" Value="35,0,30,0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="LineHeight" Value="45" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleDeepDiveScreenHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="75" />
+        <Setter Property="LineHeight" Value="85" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveScreenHeadlineSmallLineHeight"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveScreenHeadline}">
+        <Setter Property="LineHeight" Value="80" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveScreenMediumHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="LineHeight" Value="72" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveScreenSubHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="LineHeight" Value="60" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveScreenText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="LineHeight" Value="50" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveScreenTextSmall"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="LineHeight" Value="45" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveHint"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="LineHeight" Value="32" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewBase"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="LineHeight" Value="40" />
+        <Setter Property="TextAlignment" Value="Left" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewQuestionHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveQuestionPreviewBase}">
+        <Setter Property="Foreground" Value="#99B3E5" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewQuestionText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveQuestionPreviewBase}">
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewAnswerHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveQuestionPreviewBase}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#99B3E5" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewAnswerText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveQuestionPreviewBase}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveQuestionPreviewIndex"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleDeepDiveQuestionPreviewBase}">
+        <Setter Property="Foreground" Value="#99B3E5" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleDeepDiveContentHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="Margin" Value="0,60,0,0" />
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="LineHeight" Value="72" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveContentSubHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="LineHeight" Value="50" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveContentParagraphHeadline"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="LineHeight" Value="36" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleDeepDiveContentParagraph"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="LineHeight" Value="36" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleWallStationTitle"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="68" />
+        <Setter Property="LineHeight" Value="82" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#f1e967" />
+    </Style>
+    <textformatting:TextStyle
+        x:Key="FormattingTextStyleStationTitleSecondLanguage"
+        Foreground="#858b52">
+    </textformatting:TextStyle>
+    
+    <Style
+        x:Key="TextStyleWallBackgroundLink"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="45" />
+        <Setter Property="LineHeight" Value="54" />
+        <Setter Property="TextAlignment" Value="Right" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    
+    <Style
+        x:Key="TextStyleWallDescriptionDefaultLanguage"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="LineHeight" Value="30" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style
+        x:Key="TextStyleWallDescriptionSecondLanguage"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleWallDescriptionDefaultLanguage}">
+        <Setter Property="Foreground" Value="#84A0AF" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleWallQuestionTitle"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="LineHeight" Value="42" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="#f1e967" />
+    </Style>
+    <textformatting:TextStyle
+        x:Key="FormattingTextStyleQuestionTitleSecondLanguage"
+        Foreground="#858b52">
+    </textformatting:TextStyle>
+    <Style
+        x:Key="TextStyleWallQuestionText"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="LineHeight" Value="24" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <textformatting:TextStyle
+        x:Key="FormattingTextStyleQuestionTextSecondLanguage"
+        Foreground="#84A0AF">
+    </textformatting:TextStyle>
+    <Style
+        x:Key="TextStyleWallQuestionAnswer"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleWallQuestionText}">
+        <Setter Property="TextAlignment" Value="Right" />
+    </Style>
+    <textformatting:TextStyle
+        x:Key="FormattingTextStyleQuestionAnswerSecondLanguage"
+        Foreground="#84A0AF">
+    </textformatting:TextStyle>
+    <Style
+        x:Key="TextStyleWallQuestionLabel"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleWallQuestionText}">
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    <textformatting:TextStyle
+        x:Key="FormattingTextStyleQuestionLabelSecondLanguage"
+        Foreground="#84A0AF">
+    </textformatting:TextStyle>
+    <Style
+        x:Key="TextStyleWallAnswerCount"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="LineHeight" Value="24" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="#f1e967" />
+    </Style>
+    <Style
+        x:Key="TextStyleWallPieLabel"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="Margin" Value="0,3,0,0" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="LineHeight" Value="26" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+    </Style>
+
+    <Style
+        x:Key="TextStyleWallPageProgress"
+        TargetType="TextBlock"
+        BasedOn="{StaticResource TextStyleCtsBase}">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="LineHeight" Value="24" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+</ResourceDictionary>

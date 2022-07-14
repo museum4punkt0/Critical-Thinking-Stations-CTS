@@ -1,0 +1,116 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.DeepDive.Controls.FinalOverviewScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:common="clr-namespace:Gemelo.Applications.Cts.DeepDive.Controls.Common"
+    mc:Ignorable="d" 
+    d:DesignWidth="1920" d:DesignHeight="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Geometries.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Scrollbars.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="StyleGridQuestionPreviewsThreeColumns"
+                TargetType="UniformGrid">
+                <Setter Property="Columns" Value="3" />
+                <Setter Property="Margin" Value="-23,20,0,20" />
+            </Style>
+            <Style
+                x:Key="StyleGridQuestionPreviewsFourColumns"
+                TargetType="UniformGrid">
+                <Setter Property="Columns" Value="4" />
+                <Setter Property="Margin" Value="-27,20,0,20" />
+            </Style>
+            <Style
+                x:Key="StyleQuestionPreviewForThreeColumns"
+                TargetType="common:QuestionPreview">
+                <Setter Property="Width" Value="558" />
+                <Setter Property="Margin" Value="23,0,0,0" />
+            </Style>
+            <Style
+                x:Key="StyleQuestionPreviewForFourColumns"
+                TargetType="common:QuestionPreview">
+                <Setter Property="Width" Value="410" />
+                <Setter Property="Margin" Value="27,0,0,25" />
+            </Style>
+            <Style
+                x:Key="TextStyleStationHeadline"
+                TargetType="TextBlock"
+                BasedOn="{StaticResource TextStyleDeepDiveScreenMediumHeadline}">
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <ScrollViewer
+        x:Name="m_ScrollMain"
+        Style="{StaticResource ScrollViewerWithBarOverContent}"
+        PanningMode="VerticalOnly"
+        HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto"
+        Background="Transparent"
+        ManipulationBoundaryFeedback="ScrollViewer_ManipulationBoundaryFeedback"
+        ScrollChanged="ScrollViewer_ScrollChanged">
+        <Grid>
+            <common:DeepDiveBackground
+                VerticalAlignment="Top" />
+            <StackPanel
+                Margin="100,100,100,70">
+                <TextBlock
+                    x:Name="m_TxtHeadline"
+                    Style="{StaticResource TextStyleDeepDiveScreenHeadline}"
+                    Width="1300" MinHeight="300"
+                    HorizontalAlignment="Left">
+                    Der „Deep Dive” – Zweifeln erlaubt!
+                </TextBlock>
+                <StackPanel
+                    x:Name="m_StackQuestions">
+                    <TextBlock
+                        Style="{StaticResource TextStyleStationHeadline}">
+                        Galerie der 7 Millionen
+                    </TextBlock>
+                    <UniformGrid
+                        Style="{StaticResource StyleGridQuestionPreviewsFourColumns}">
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForFourColumns}"
+                            IsForDeepDive="False" />
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForFourColumns}"
+                            IsForDeepDive="False" />
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForFourColumns}"
+                            IsForDeepDive="False" />
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForFourColumns}"
+                            IsForDeepDive="False" />
+                    </UniformGrid>
+                    <TextBlock
+                        Style="{StaticResource TextStyleStationHeadline}">
+                        Ankunft
+                    </TextBlock>
+                    <UniformGrid
+                        Style="{StaticResource StyleGridQuestionPreviewsThreeColumns}">
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForThreeColumns}"
+                            IsForDeepDive="False" />
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForThreeColumns}"
+                            IsForDeepDive="False" />
+                        <common:QuestionPreview
+                            Style="{StaticResource StyleQuestionPreviewForThreeColumns}"
+                            IsForDeepDive="False" />
+                    </UniformGrid>
+
+                </StackPanel>
+                <common:DeepDiveFooter
+                    x:Name="m_Footer"
+                    Margin="0,60,0,0"
+                    NextClick="Footer_NextClick" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

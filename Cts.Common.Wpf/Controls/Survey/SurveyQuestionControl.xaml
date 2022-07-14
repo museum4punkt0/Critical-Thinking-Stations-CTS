@@ -1,0 +1,110 @@
+﻿<UserControl 
+    x:Class="Gemelo.Components.Cts.Controls.Survey.SurveyQuestionControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    mc:Ignorable="d" 
+    Width="1455">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Controls.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfex:InverseVisibilityConverter
+                x:Key="InverseVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <TextBlock
+            x:Name="m_TxtQuestion"
+            Style="{StaticResource StyleSurveyQuestionText}"
+            Width="1425" Height="240"
+            HorizontalAlignment="Left">
+            Leben Sie in dem Land, in dem Sie geboren sind?
+        </TextBlock>
+        <ComboBox
+            x:Name="m_ComboYearOfBirth"
+            Visibility="Collapsed"
+            Style="{StaticResource StyleComboYearOfBirth}"
+            SelectionChanged="ComboYearOfBirth_SelectionChanged"
+            HorizontalAlignment="Left">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock 
+                        wpfex:Localization.TextDe="{Binding Path=TextDe}"
+                        wpfex:Localization.TextEn="{Binding Path=TextEn}"
+                        Text="{Binding Path=TextCurrent}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <UniformGrid
+            x:Name="m_GridAnswers"
+            Columns="2"
+            Width="1440"
+            HorizontalAlignment="Left"
+            Margin="-20,-20,0,0">
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+            <wpfex:BorderedButton
+                Style="{StaticResource StyleSurveyAnswerButtonBase}">
+                <TextBlock
+                    Style="{StaticResource StyleSurveyAnswerText}">
+                    Ja, schon immer!
+                </TextBlock>
+            </wpfex:BorderedButton>
+        </UniformGrid>
+    </StackPanel>
+</UserControl>

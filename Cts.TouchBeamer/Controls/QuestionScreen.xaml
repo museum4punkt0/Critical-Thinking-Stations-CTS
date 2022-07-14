@@ -1,0 +1,35 @@
+﻿<UserControl 
+    x:Class="Gemelo.Applications.Cts.TouchBeamer.Controls.QuestionScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    mc:Ignorable="d" 
+    Width="1920" Height="1080">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <wpfex:InverseVisibilityConverter
+                x:Key="InverseVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid
+        Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1455" />
+            <ColumnDefinition Width="385" />
+        </Grid.ColumnDefinitions>
+        <cts:SurveyQuestionControl
+            x:Name="m_QuestionControl"
+            ButtonStyle="{StaticResource StyleSurveyTouchBeamerAnswerButton}"
+            AnswerChanged="QuestionControl_AnswerChanged" />
+    </Grid>
+</UserControl>
+

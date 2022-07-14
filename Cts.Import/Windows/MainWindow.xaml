@@ -1,0 +1,74 @@
+﻿<cts:CtsMainWindow 
+    x:Class="Gemelo.Applications.Cts.Import.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpfex="http://schema.gemelo.de/components/wpfex"
+    xmlns:cts="http://schema.gemelo.de/components/cts"
+    mc:Ignorable="d"
+    Width="1920" Height="1080">
+
+    <cts:CtsMainWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/Buttons.xaml" />
+                <ResourceDictionary Source="/gemelo.Cts.Common.Wpf;component/Resources/Xaml/TextStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="StyleImportButton"
+                TargetType="wpfex:BorderedButton"
+                BasedOn="{StaticResource StyleCtsNextButtonBase}">
+                <Setter Property="Margin" Value="100,20" />
+                <Setter Property="Background" Value="#B61F29" />
+                <Setter Property="Foreground" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </cts:CtsMainWindow.Resources>
+
+    <DockPanel
+        Background="#ed7404">
+        <Border
+            DockPanel.Dock="Bottom"
+            Height="120">
+            <wpfex:AnimatedLogoDisplay
+                x:Name="m_LogoGemelo"
+                Margin="0,30,80,20"
+                HorizontalAlignment="Right" VerticalAlignment="Center" />
+        </Border>
+        <Viewbox>
+            <StackPanel
+                MinWidth="1000" MinHeight="650"
+                Margin="100,50">
+                <cts:CtsLogo
+                    Height="200" />
+                <TextBlock
+                    Style="{StaticResource TextStyleCtsStationTitle}"
+                    Margin="0,40">
+                    Import-Tool
+                </TextBlock>
+                <wpfex:BorderedButton
+                    x:Name="m_BtnStart"
+                    Style="{StaticResource StyleImportButton}"
+                    Height="100"
+                    Click="BtnStart_Click">
+                    Import from Excel
+                </wpfex:BorderedButton>
+                <wpfex:BorderedButton
+                    x:Name="m_BtnClearDemoUserData"
+                    Style="{StaticResource StyleImportButton}"
+                    Height="100"
+                    Click="BtnClearDemoUserData_Click">
+                    Clear all demo user data
+                </wpfex:BorderedButton>
+                <wpfex:BorderedButton
+                    x:Name="m_BtnClearAllUserData"
+                    Style="{StaticResource StyleImportButton}"
+                    Height="100"
+                    Click="BtnClearAllUserData_Click">
+                    Clear ALL (!!!) data
+                </wpfex:BorderedButton>
+            </StackPanel>
+        </Viewbox>
+    </DockPanel>
+</cts:CtsMainWindow >

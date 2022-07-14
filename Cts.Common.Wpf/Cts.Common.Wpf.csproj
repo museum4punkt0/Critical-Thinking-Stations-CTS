@@ -1,0 +1,448 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Deterministic>false</Deterministic>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>gemelo.Cts.Common.Wpf</AssemblyName>
+    <RootNamespace>Gemelo.Components.Cts</RootNamespace>
+    <Product>Deutsches Auswandererhaus Critical Thinking Stations</Product>
+    <Company>gemelo GmbH</Company>
+    <Copyright>© Copyright 2021 gemelo GmbH</Copyright>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <Authors>gemelo GmbH</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00000.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00001.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00002.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00003.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00004.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00005.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00006.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00007.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00008.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00009.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00010.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00011.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00012.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00013.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00014.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00015.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00016.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00017.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00018.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00019.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00020.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00021.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00022.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00023.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00024.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00025.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00026.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00027.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00028.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00029.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00030.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00031.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00032.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00033.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00034.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00035.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00036.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00037.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00038.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00039.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00040.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00041.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00042.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00043.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00044.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00045.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00046.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00047.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00048.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00049.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00050.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00051.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00052.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00053.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00054.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00055.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00056.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00057.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00058.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00059.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00060.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00061.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00062.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00063.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00064.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00065.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00066.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00067.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00068.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00069.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00070.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00071.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00072.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00073.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00074.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00075.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00076.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00077.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00078.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00079.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00080.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00081.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00082.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00083.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00084.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00085.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00086.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00087.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00088.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00089.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00090.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00091.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00092.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00093.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00094.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00095.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00096.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00097.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00098.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00099.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00100.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00101.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00102.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00103.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00104.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00105.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00106.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00107.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00108.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00109.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00110.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00111.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00112.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00113.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00114.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00115.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00116.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00117.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00118.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00119.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00120.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00121.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00122.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00123.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00124.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00125.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00126.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00127.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00128.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00129.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00130.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00131.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00132.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00133.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00134.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00135.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00136.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00137.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00138.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00139.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00140.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00141.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00142.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00143.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00144.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00145.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00146.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00147.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00148.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00149.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00150.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00151.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00152.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00153.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00154.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00155.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00156.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00157.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00158.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00159.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00160.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00161.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00162.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00163.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00164.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00165.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00166.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00167.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00168.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00169.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00170.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00171.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00172.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00173.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00174.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00175.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00176.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00177.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00178.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00179.png" />
+    <None Remove="Resources\Images\Sequences\CTS_Logo_anim_00180.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cts.Common\Cts.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="gemelo.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Exhibits">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Exhibits.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Common.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="gemelo.Dah.Common.Wpf">
+      <HintPath>..\gemelo-libraries\gemelo.Dah.Common.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00000.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00001.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00002.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00003.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00004.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00005.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00006.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00007.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00008.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00009.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00010.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00011.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00012.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00013.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00014.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00015.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00016.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00017.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00018.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00019.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00020.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00021.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00022.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00023.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00024.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00025.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00026.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00027.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00028.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00029.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00030.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00031.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00032.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00033.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00034.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00035.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00036.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00037.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00038.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00039.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00040.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00041.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00042.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00043.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00044.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00045.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00046.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00047.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00048.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00049.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00050.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00051.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00052.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00053.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00054.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00055.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00056.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00057.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00058.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00059.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00060.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00061.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00062.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00063.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00064.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00065.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00066.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00067.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00068.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00069.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00070.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00071.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00072.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00073.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00074.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00075.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00076.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00077.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00078.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00079.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00080.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00081.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00082.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00083.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00084.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00085.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00086.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00087.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00088.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00089.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00090.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00091.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00092.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00093.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00094.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00095.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00096.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00097.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00098.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00099.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00100.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00101.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00102.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00103.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00104.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00105.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00106.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00107.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00108.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00109.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00110.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00111.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00112.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00113.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00114.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00115.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00116.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00117.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00118.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00119.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00120.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00121.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00122.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00123.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00124.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00125.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00126.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00127.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00128.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00129.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00130.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00131.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00132.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00133.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00134.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00135.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00136.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00137.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00138.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00139.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00140.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00141.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00142.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00143.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00144.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00145.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00146.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00147.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00148.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00149.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00150.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00151.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00152.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00153.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00154.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00155.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00156.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00157.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00158.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00159.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00160.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00161.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00162.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00163.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00164.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00165.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00166.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00167.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00168.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00169.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00170.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00171.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00172.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00173.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00174.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00175.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00176.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00177.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00178.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00179.png" />
+    <Resource Include="Resources\Images\Sequences\CTS_Logo_anim_00180.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controls\Common\CtsStartScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Survey\SurveyQuestionControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Controls\Common\CtsStartScreen.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Common\MessageBox.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Controls\Logos\CtsLogo.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Controls\Media\MediaPlayer.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Survey\SurveyQuestionControl.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Xaml\Buttons.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Resources\Xaml\Controls.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Resources\Xaml\Geometries.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Resources\Xaml\TextStyles.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+</Project>
