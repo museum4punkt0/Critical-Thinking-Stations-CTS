@@ -351,3 +351,5 @@ Auftragnehmer: **gemelo GmbH**, Stresemannstraße 375, 22761 Hamburg, Telefon +4
 Ansprechpartner: Peer Lessing, info@gemelo.de
 
 Graphische Gestaltung: **Studio Andreas Heller GmbH** Architects & Designers, Am Sandtorkai 48 / Hamburg America Center, 20457 Hamburg
+
+Code und Dokumentation in diesem Repositorium wurden begutachtet durch TICE Software UG (haftungsbeschränkt) (https://tice.software/de/)
